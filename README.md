@@ -110,3 +110,9 @@ As referências são informativas e não constituem aconselhamento jurídico nem
 ## Variáveis para evolução
 
 Copie `.env.example` para `.env.local` quando for integrar serviços. As variáveis são apenas placeholders: nenhuma chamada aos Correios ou API própria é executada neste protótipo. O mapa usa tiles públicos do OpenStreetMap, sujeitos à política de uso do provedor.
+
+## Deploy no Vercel
+
+O arquivo `vercel.json` reescreve as rotas do React Router (`/painel`, `/solicitar`, `/pontos`, `/rastreio`, `/parceiros` e `/educacao`) para `index.html`, permitindo abrir ou atualizar diretamente essas URLs. `public/robots.txt` permite rastreamento geral e aponta para `public/sitemap.xml`.
+
+Esses arquivos não contornam Deployment Protection, autenticação, firewall ou regras de bot do projeto Vercel. Como o conteúdo das páginas é renderizado no navegador, crawlers que não executam JavaScript podem ler apenas o shell inicial. Para indexação consistente por mecanismos e agentes que não executam JavaScript, será necessário prerenderização/SSR, por exemplo com uma camada de geração estática.

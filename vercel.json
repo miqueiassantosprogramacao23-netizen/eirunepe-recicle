@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/painel", "destination": "/index.html" },
+    { "source": "/solicitar", "destination": "/index.html" },
+    { "source": "/pontos", "destination": "/index.html" },
+    { "source": "/rastreio", "destination": "/index.html" },
+    { "source": "/parceiros", "destination": "/index.html" },
+    { "source": "/educacao", "destination": "/index.html" }
+  ]
+}
